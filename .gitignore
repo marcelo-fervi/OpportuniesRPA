@@ -1,0 +1,6 @@
+# Ignore folders that could cause issues if accidentally tracked
+**/.local/**
+**/.settings/**
+**/.objects/**
+**/.tmh/**
+**/*.log

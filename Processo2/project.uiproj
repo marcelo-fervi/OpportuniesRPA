@@ -1,0 +1,6 @@
+{
+  "Name": "Processo2",
+  "ProjectType": "Process",
+  "Description": "Automação que pega as informações da fila e as cadastra no Sistema Forms.\r\nPorém, somente deverão ser cadastrados os itens de origem: USA e Germany.\r\n",
+  "MainFile": "Main.xaml"
+}

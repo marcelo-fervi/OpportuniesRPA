@@ -1,0 +1,6 @@
+{
+  "Name": "Processo1",
+  "ProjectType": "Process",
+  "Description": "Automação que recolhe informações da tabela do UiPath, e envia cada linha para a fila que será processada pelo Processo2.",
+  "MainFile": "Main.xaml"
+}
