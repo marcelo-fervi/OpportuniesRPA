@@ -13,13 +13,15 @@ Deve ser iniciada manualmente, e ao ser acionada, ela cumprirá as seguintes eta
 - Acessará uma URL com a tabela com dados de exemplo em: https://www.rpasamples.com/opportunities;
 - Fará a extração dos dados da tabela Opportunities;
 - Organizará cada oportunidade em um Dictionary separado;
-- Enviará cada Dictionary separadamente para uma Queue que será consumida pela **Automação 2**.
+- Enviará um Dictionary onde cada chave corresponde a uma oportunidade, porém cada valor será uma string JSON serializada será consumida pela **Automação 2**.
 
 ## Automação 2
-Essa automação irá iniciar sozinha utilizando um **Queue Trigger** do Orchestrator que, assim que identificar a chegada de um novo item na fila (Queue), iniciará a automação e fará o seguinte:
-- Verificará a nacionalidade (Country) da oportunidade, permitindo somente "USA" ou "Germany";
-- Abrirá o navegador padrão para acessar um formulário alvo do Google Forms para o cadastro das oportunidades;
+Essa automação irá iniciar sozinha utilizando um **Queue Trigger** do Orchestrator que, assim que identificar a chegada da lista de oportunidades na fila (Queue), iniciará a automação, e buscará iterar por cada oportunidade, fazendo o seguinte:
+- Fará a deserialização do JSON da oportunidade;
+- Verificará a nacionalidade (Country) dela, permitindo somente "USA" ou "Germany";
+- Abrirá o navegador padrão para acessar um formulário alvo do Google Forms para o cadastro da oportunidade;
 - Preencherá os inputs do formulário conforme as regras impostas dentro dele;
 - Tentará fazer submit do formulário;
-- Aguardará por uma indicação de sucesso ou falha no envio;
-- Enviará um relatório via email indicando o sucesso ou falha no cadastro dessa oportunidade.
+- Aguardará por uma indicação de sucesso ou falha no envio.
+
+Ao terminar a iteração de todas as oportunidades, um relatório será enviado via email indicando diversas estatísticas relacionadas a todo o procedimento, como total de oportunidades lidas, quantas foram sucedidas, quantas falharam, etc.
