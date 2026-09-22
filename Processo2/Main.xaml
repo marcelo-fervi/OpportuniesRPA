@@ -143,7 +143,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,4586" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,3747" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="systemBrowser">
         <Variable.Default>
@@ -162,7 +162,6 @@
       <Variable x:TypeArguments="x:String" Name="itemCountryLowered" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="itemID" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="itemQuantity" />
-      <Variable x:TypeArguments="ui:QueueItem" Name="transactionItem" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -444,13 +443,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SetTransactionProgress>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome/Edge: Exercício DEV - UIPATH" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,3990" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="False" ScopeGuid="71fcd450-a01d-4bd2-882a-bb3c21f36534" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome/Edge: Exercício DEV - UIPATH" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,3151" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="False" ScopeGuid="71fcd450-a01d-4bd2-882a-bb3c21f36534" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Preenche o formulário todo e faz o submit dele." DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="486,3795" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence sap2010:Annotation.AnnotationText="Preenche o formulário todo e faz o submit dele." DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="486,2956" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="emailResultMessage" />
             </Sequence.Variables>
@@ -1048,13 +1047,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:Click>
-            <uix:NCheckState sap2010:Annotation.AnnotationText="Verifica se o submit foi bem sucedido ou não. Dependendo do resultado, uma mensagem customizada será criada e utilizada no email de relatório de conclusão do processo." DisplayName="Check App State: 'Sua resposta foi regist…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1407" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="71fcd450-a01d-4bd2-882a-bb3c21f36534" Timeout="10" Version="V5">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="Verifica se o submit foi bem sucedido ou não. Dependendo do resultado, uma mensagem customizada será criada e utilizada no email de relatório de conclusão do processo." DisplayName="Check App State: 'Sua resposta foi regist…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,578" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="71fcd450-a01d-4bd2-882a-bb3c21f36534" Timeout="10" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence sap2010:Annotation.AnnotationText="Define a mensagem dinâmica do email informando que o formulário foi enviado com sucesso." DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,503" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence sap2010:Annotation.AnnotationText="Define a mensagem dinâmica do email informando que o formulário foi enviado com sucesso, além de definir o estado da transação como Bem-sucedido." DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="450,86" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -1104,11 +1103,11 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence sap2010:Annotation.AnnotationText="Define a mensagem dinâmica do email informando que ocorreu um erro no envio do formulário." DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,498" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence sap2010:Annotation.AnnotationText="Define a mensagem dinâmica do email informando que ocorreu um erro no envio do formulário, além de definir o estado da transação como &quot;Falha&quot;." DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="450,86" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -1156,7 +1155,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" sap2010:Annotation.AnnotationText="Envia um email informando o sucesso ou fracasso no cadastro dos dados no formulário." AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="8e1abaa9-6fc9-4ed2-bb59-9ee5e6f8dcaf" DisplayName="Send Email: Success or Failure" sap:VirtualizedContainerService.HintSize="452,550" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" UseConnectionService="True">
+            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" sap2010:Annotation.AnnotationText="Envia um email informando o sucesso ou fracasso no cadastro dos dados no formulário." AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="8e1abaa9-6fc9-4ed2-bb59-9ee5e6f8dcaf" DisplayName="Send Email: Final Report" sap:VirtualizedContainerService.HintSize="452,540" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" UseConnectionService="True">
               <uga:SendEmailConnections.Attachments>
                 <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
               </uga:SendEmailConnections.Attachments>
@@ -1169,7 +1168,7 @@
               </uga:SendEmailConnections.AttachmentsBackup>
               <uga:SendEmailConnections.Body>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">string.Format("&lt;P&gt;&lt;SPAN&gt;Ol&amp;#225;, este &amp;#233; um email automatizado e eu sou o RPA respons&amp;#225;vel pelo cadastro automatizado de dados do UiPath para um Google Forms espec&amp;#237;fico.&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;/P&gt;", emailResultMessage)</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">string.Format("&lt;P&gt;&lt;SPAN&gt;Ol&amp;#225;, este &amp;#233; um email automatizado e eu sou o RPA respons&amp;#225;vel pelo cadastro automatizado de oportunidades do UiPath para um Google Forms espec&amp;#237;fico.&lt;/SPAN&gt;&lt;BR/&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;/P&gt;", emailResultMessage)</CSharpValue>
                 </InArgument>
               </uga:SendEmailConnections.Body>
               <uga:SendEmailConnections.InputTypeBackup>
