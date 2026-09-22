@@ -145,7 +145,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,5081" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,5194" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="systemBrowser">
         <Variable.Default>
@@ -275,13 +275,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SetTransactionProgress>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itera por cada oportunidade recebida da Queue." DisplayName="For Each: currOpportunity_str" sap:VirtualizedContainerService.HintSize="524,4410" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itera por cada oportunidade recebida da Queue." DisplayName="For Each: currOpportunity_str" sap:VirtualizedContainerService.HintSize="524,4076" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currOpportunity_str" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,4248" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,3914" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="currOpportunity" />
               <Variable x:TypeArguments="x:Int32" Name="itemIndex" />
@@ -483,7 +483,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <ui:SetTransactionProgress TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Define o progresso da transação como: &quot;Filtrando X/Y&quot;." DisplayName="Set Transaction Progress: Filtered" sap:VirtualizedContainerService.HintSize="488,220" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_2">
+            <ui:SetTransactionProgress TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Define o progresso da transação como: &quot;Filtrando X/Y&quot;." DisplayName="Set Transaction Progress: Filtering" sap:VirtualizedContainerService.HintSize="488,102" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_2">
               <ui:SetTransactionProgress.Progress>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_138">$"Filtrando {itemIndex}/{items.Count}"</CSharpValue>
@@ -496,13 +496,13 @@
               </ui:SetTransactionProgress.TransactionItem>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SetTransactionProgress>
-            <If sap2010:Annotation.AnnotationText="Averigua se o item tem o país definido como USA ou Germany. Se sim, prosseguimos, caso contrário, pulamos pro próximo da lista." DisplayName="If: Filter countries we don't want to process" sap:VirtualizedContainerService.HintSize="488,556" sap2010:WorkflowViewState.IdRef="If_1">
+            <If sap2010:Annotation.AnnotationText="Averigua se o item tem o país definido como USA ou Germany. Se sim, prosseguimos, caso contrário, pulamos pro próximo da lista." DisplayName="If: Filter countries we don't want to process" sap:VirtualizedContainerService.HintSize="488,340" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">itemCountryLowered == "usa" || itemCountryLowered == "germany"</CSharpValue>
@@ -516,11 +516,11 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap2010:Annotation.AnnotationText="A cidade é do nosso interesse. Iremos gerar uma log, aumentar o contador de oportunidades elegíveis para leitura e prosseguir com a execução." DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,302" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap2010:Annotation.AnnotationText="A cidade é do nosso interesse. Iremos gerar uma log, aumentar o contador de oportunidades elegíveis para leitura e prosseguir com a execução." DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,86" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -1282,7 +1282,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:SetTransactionProgress TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Define o progresso da transação como: &quot;Envio falhou X/Y&quot;." DisplayName="Set Transaction Progress: Done" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_7">
+                          <ui:SetTransactionProgress TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Define o progresso da transação como: &quot;Envio falhou X/Y&quot;." DisplayName="Set Transaction Progress: Failure" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_7">
                             <ui:SetTransactionProgress.Progress>
                               <InArgument x:TypeArguments="x:String">
                                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">$"Envio falhou {itemIndex}/{items.Count}"</CSharpValue>
@@ -1404,7 +1404,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SetTransactionStatus>
-    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" sap2010:Annotation.AnnotationText="Envia um email com um relatório de como foi o processamento das oportunidades, indicando quantia total, quantia de sucessos, falhas, etc." AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="8e1abaa9-6fc9-4ed2-bb59-9ee5e6f8dcaf" DisplayName="Send Email: Report Resume" sap:VirtualizedContainerService.HintSize="524,109" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" UseConnectionService="True">
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" sap2010:Annotation.AnnotationText="Envia um email com um relatório de como foi o processamento das oportunidades, indicando quantia total, quantia de sucessos, falhas, etc." AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="8e1abaa9-6fc9-4ed2-bb59-9ee5e6f8dcaf" DisplayName="Send Email: Report Resume" sap:VirtualizedContainerService.HintSize="524,556" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" UseConnectionService="True">
       <uga:SendEmailConnections.Attachments>
         <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
       </uga:SendEmailConnections.Attachments>
@@ -1439,8 +1439,8 @@
       </uga:SendEmailConnections.To>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
