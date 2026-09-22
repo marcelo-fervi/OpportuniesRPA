@@ -145,7 +145,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,5602" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,5081" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="systemBrowser">
         <Variable.Default>
@@ -153,7 +153,6 @@
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="ui:QueueItem" Name="incomingQueueItem" />
-      <Variable x:TypeArguments="ui:QueueItem" Name="transactionItem" />
       <Variable x:TypeArguments="x:Int32" Name="successCount" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="items" />
       <Variable x:TypeArguments="x:Int32" Name="failureCount" />
@@ -276,13 +275,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:SetTransactionProgress>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each: currOpportunity" sap:VirtualizedContainerService.HintSize="524,4858" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itera por cada oportunidade recebida da Queue." DisplayName="For Each: currOpportunity_str" sap:VirtualizedContainerService.HintSize="524,4410" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currOpportunity_str" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,4727" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,4248" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="currOpportunity" />
               <Variable x:TypeArguments="x:Int32" Name="itemIndex" />
@@ -303,7 +302,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Preparo inicial dos dados vindos da fila para utilizá-los posteriormente, tanto no preenchimento do formulário, quanto na filtragem antes de preencher o formulário." DisplayName="Multiple Assign: Queue data variables" sap:VirtualizedContainerService.HintSize="488,613" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Preparo inicial dos dados vindos da fila para utilizá-los posteriormente, tanto no preenchimento do formulário, quanto na filtragem antes de preencher o formulário." DisplayName="Multiple Assign: Queue data variables" sap:VirtualizedContainerService.HintSize="488,134" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -478,8 +477,8 @@
               </ui:MultipleAssign.AssignOperations>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -1377,8 +1376,15 @@
           <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">items.Values</CSharpValue>
         </InArgument>
       </ui:ForEach.Values>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status: Success" ErrorType="Business" sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful">
+    <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Define o estado da transação como: &quot;Bem-sucedido&quot;." DisplayName="Set Transaction Status: Success" ErrorType="Business" sap:VirtualizedContainerService.HintSize="524,102" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful">
       <ui:SetTransactionStatus.Analytics>
         <scg:Dictionary x:TypeArguments="x:String, InArgument" />
       </ui:SetTransactionStatus.Analytics>
@@ -1390,6 +1396,13 @@
           <CSharpValue x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">incomingQueueItem</CSharpValue>
         </InArgument>
       </ui:SetTransactionStatus.TransactionItem>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:SetTransactionStatus>
     <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" sap2010:Annotation.AnnotationText="Envia um email com um relatório de como foi o processamento das oportunidades, indicando quantia total, quantia de sucessos, falhas, etc." AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="8e1abaa9-6fc9-4ed2-bb59-9ee5e6f8dcaf" DisplayName="Send Email: Report Resume" sap:VirtualizedContainerService.HintSize="524,109" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" UseConnectionService="True">
       <uga:SendEmailConnections.Attachments>
