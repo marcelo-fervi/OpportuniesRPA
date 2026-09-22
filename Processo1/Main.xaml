@@ -122,7 +122,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,1865" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1281,1840" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="systemBrowser">
         <Variable.Default>
@@ -135,20 +135,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Acessa uma URL que possui uma tabela que será lida e extraída automaticamente para extraírmos os dados e enviá-los a um outro processo, utilizando Queues, para que sejam devidamente processados e cadastrados." DisplayName="Sequência principal" sap:VirtualizedContainerService.HintSize="558,1842" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Acessa uma URL que possui uma tabela que terá seus dados extraídos e enviados a uma outra automação (Processo2), utilizando Queues, para que sejam devidamente processados e cadastrados." DisplayName="Sequência principal" sap:VirtualizedContainerService.HintSize="620,1817" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Acessa o endereço com a tabela de oportunidades usando o Chrome/Edge (navegador padrão baseado em Chromium)." AttachMode="ByInstance" DisplayName="Chrome/Edge: Sales Opportunities" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,1698" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2cb8b5b6-69a6-4108-b20b-25dffc1dce74" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Acessa o endereço com a tabela de oportunidades usando o Chrome/Edge (navegador padrão baseado em Chromium)." AttachMode="ByInstance" DisplayName="Chrome/Edge: Sales Opportunities" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="586,1689" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2cb8b5b6-69a6-4108-b20b-25dffc1dce74" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Action:" sap:VirtualizedContainerService.HintSize="522,1458" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Action:" sap:VirtualizedContainerService.HintSize="584,1449" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd2:DataTable" Name="extractedTable" />
               </Sequence.Variables>
@@ -157,7 +157,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NExtractDataGeneric x:TypeArguments="sd2:DataTable" sap2010:Annotation.AnnotationText="Faz a extração dos dados da tabela e os retorna pela variável 'extractedTable'." ContinueOnError="True" DisplayName="Extract Table Data: RPA Samples table" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='ID'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Account Name' ReferenceIdx='1' Name='Account Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Country' ReferenceIdx='2' Name='Country'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Opportunity Owner' ReferenceIdx='3' Name='Opportunity Owner'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Stage' ReferenceIdx='4' Name='Stage'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Quantity' ReferenceIdx='5' Name='Quantity'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Unit Sales Price' ReferenceIdx='6' Name='Unit Sales Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total Price' ReferenceIdx='7' Name='Total Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='List Price' ReferenceIdx='8' Name='List Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Account Name' attr='fulltext' /&gt;&lt;column name='Country' attr='fulltext' /&gt;&lt;column name='Opportunity Owner' attr='fulltext' /&gt;&lt;column name='Stage' attr='fulltext' /&gt;&lt;column name='Quantity' attr='fulltext' /&gt;&lt;column name='Unit Sales Price' attr='fulltext' /&gt;&lt;column name='Total Price' attr='fulltext' /&gt;&lt;column name='List Price' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,102" sap2010:WorkflowViewState.IdRef="NExtractDataGeneric`1_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="2cb8b5b6-69a6-4108-b20b-25dffc1dce74" Version="V5">
+              <uix:NExtractDataGeneric x:TypeArguments="sd2:DataTable" sap2010:Annotation.AnnotationText="Faz a extração dos dados da tabela e os retorna pela variável 'extractedTable'." ContinueOnError="True" DisplayName="Extract Table Data: RPA Samples table" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='ID'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Account Name' ReferenceIdx='1' Name='Account Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Country' ReferenceIdx='2' Name='Country'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Opportunity Owner' ReferenceIdx='3' Name='Opportunity Owner'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Stage' ReferenceIdx='4' Name='Stage'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Quantity' ReferenceIdx='5' Name='Quantity'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Unit Sales Price' ReferenceIdx='6' Name='Unit Sales Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total Price' ReferenceIdx='7' Name='Total Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='List Price' ReferenceIdx='8' Name='List Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Account Name' attr='fulltext' /&gt;&lt;column name='Country' attr='fulltext' /&gt;&lt;column name='Opportunity Owner' attr='fulltext' /&gt;&lt;column name='Stage' attr='fulltext' /&gt;&lt;column name='Quantity' attr='fulltext' /&gt;&lt;column name='Unit Sales Price' attr='fulltext' /&gt;&lt;column name='Total Price' attr='fulltext' /&gt;&lt;column name='List Price' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="550,102" sap2010:WorkflowViewState.IdRef="NExtractDataGeneric`1_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="2cb8b5b6-69a6-4108-b20b-25dffc1dce74" Version="V5">
                 <uix:NExtractDataGeneric.ExtractedData>
                   <OutArgument x:TypeArguments="sd2:DataTable">
                     <CSharpReference x:TypeArguments="sd2:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">extractedTable</CSharpReference>
@@ -174,13 +174,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NExtractDataGeneric>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itera por cada linha da tabela." DisplayName="For Each Row: extractedTable" sap:VirtualizedContainerService.HintSize="488,1296" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Itera por cada linha da tabela." DisplayName="For Each Row: extractedTable" sap:VirtualizedContainerService.HintSize="550,1287" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd2:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="currentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="486,1092" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="548,1083" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="rowDictionary" />
                         <Variable x:TypeArguments="x:Int32" Name="currentColumnIndex" />
@@ -191,7 +191,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="Inicializa um novo dicionário para esta linha da tabela." DisplayName="Assign: rowDictionary" sap:VirtualizedContainerService.HintSize="452,102" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign sap2010:Annotation.AnnotationText="Inicializa um novo dicionário para esta linha da tabela." DisplayName="Assign: rowDictionary" sap:VirtualizedContainerService.HintSize="514,102" sap2010:WorkflowViewState.IdRef="Assign_1">
                         <Assign.To>
                           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
                             <CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">rowDictionary</CSharpReference>
@@ -210,13 +210,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <ui:ForEach x:TypeArguments="sd2:DataColumn" sap2010:Annotation.AnnotationText="Itera por cada coluna da tabela." DisplayName="For Each: currentColumnData to fill rowDictionary" sap:VirtualizedContainerService.HintSize="452,551" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+                      <ui:ForEach x:TypeArguments="sd2:DataColumn" sap2010:Annotation.AnnotationText="Itera por cada coluna da tabela." DisplayName="For Each: currentColumn to fill rowDictionary" sap:VirtualizedContainerService.HintSize="514,542" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="sd2:DataColumn">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd2:DataColumn" Name="currentColumn" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,389" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,380" sap2010:WorkflowViewState.IdRef="Sequence_7">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="columnValue" />
                                 <Variable x:TypeArguments="x:String" Name="columnKey" />
@@ -227,7 +227,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Salva a chave e o valor que serão adicionados no dicionário." DisplayName="Multiple Assign: Row column name and value" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Salva a chave e o valor que serão adicionados no dicionário." DisplayName="Multiple Assign: Row column name and value" sap:VirtualizedContainerService.HintSize="478,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                                 <ui:MultipleAssign.AssignOperations>
                                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -259,12 +259,12 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:MultipleAssign>
-                              <Assign sap2010:Annotation.AnnotationText="Adiciona no dicionário a chave e o valor que salvamos acima nas variáveis 'columnKey' e 'columnValue'." DisplayName="Assign: Add Key and Value to row dictionary" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign sap2010:Annotation.AnnotationText="Adiciona no dicionário a chave e o valor que salvamos acima nas variáveis 'columnKey' e 'columnValue'." DisplayName="Assign: Add Key and Value to row dictionary" sap:VirtualizedContainerService.HintSize="478,109" sap2010:WorkflowViewState.IdRef="Assign_3">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">
                                     <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">rowDictionary[columnKey]</CSharpReference>
@@ -278,6 +278,8 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
@@ -302,7 +304,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEach>
-                      <ui:LogMessage sap2010:Annotation.AnnotationText="Log de debug para verificar se os pares de chave e valor estão ok." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,102" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                      <ui:LogMessage sap2010:Annotation.AnnotationText="Log de debug para permitir verificar se os pares de chave e valor estão ok." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="514,102" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">$"Dados da linha {rowDictionary["ID"]}:\n{string.Join("\n", rowDictionary.Select(x =&gt; $"{x.Key} = {x.Value}"))}"</CSharpValue>
@@ -316,7 +318,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <ui:LogMessage sap2010:Annotation.AnnotationText="Log informativo só pra deixar claro que determinado ID foi devidamente processado." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,102" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                      <ui:LogMessage sap2010:Annotation.AnnotationText="Log informativo só pra deixar claro que determinado ID foi devidamente processado." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="514,102" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">$"Linha {rowDictionary["ID"]} processada!"</CSharpValue>
@@ -330,7 +332,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <ui:AddQueueItem TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Envia a fila 'OpportunitiesQueue-Shared' o dicionário 'rowDictionary' para ser processado pelo Processo2." DisplayName="Add Queue Item: Add row entry" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="OpportunitiesQueue-Shared">
+                      <ui:AddQueueItem TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Envia à fila 'OpportunitiesQueue-Shared' o dicionário 'rowDictionary' para ser processado pelo Processo2." DisplayName="Add Queue Item: Add row entry" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="OpportunitiesQueue-Shared">
                         <ui:AddQueueItem.ItemInformation>
                           <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                         </ui:AddQueueItem.ItemInformation>
