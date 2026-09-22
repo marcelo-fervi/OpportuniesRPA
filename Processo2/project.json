@@ -4,6 +4,7 @@
   "description": "Automação que pega as informações da fila e as cadastra no Sistema Forms.\r\nPorém, somente deverão ser cadastrados os itens de origem: USA e Germany.\r\n",
   "main": "Main.xaml",
   "dependencies": {
+    "Newtonsoft.Json": "[13.0.4]",
     "UiPath.GSuite.Activities": "[3.11.10]",
     "UiPath.System.Activities": "[26.8.1]",
     "UiPath.UIAutomation.Activities": "[26.10.3]"

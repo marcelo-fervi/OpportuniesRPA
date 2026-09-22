@@ -4,6 +4,7 @@
   "description": "Automação que recolhe informações da tabela do UiPath, e envia cada linha para a fila que será processada pelo Processo2.",
   "main": "Main.xaml",
   "dependencies": {
+    "Newtonsoft.Json": "[13.0.4]",
     "UiPath.Mail.Activities": "[2.11.10]",
     "UiPath.System.Activities": "[26.8.1]",
     "UiPath.UIAutomation.Activities": "[26.10.3]"
